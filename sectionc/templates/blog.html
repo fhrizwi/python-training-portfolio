@@ -13,65 +13,17 @@
             </div>
 
             <div class="blog-grid">
+                {% for blog in blog_posts %}
                 <article class="blog-card scroll-reveal">
-                    <img src="{% static 'images/reactperformaceblog.jpg' %}" alt="React Performance Optimization" class="blog-image">
+                    <img src="{% static blog.image %}" alt="{{ blog.title }}" class="blog-image">
                     <div class="blog-content">
-                        <div class="blog-date">March 01, 2025</div>
-                        <h2 class="blog-title">React Performance Optimization</h2>
-                        <p class="blog-excerpt">Learn advanced techniques to improve your React application's performance, including memoization, code splitting, and virtual DOM optimization strategies.</p>
+                        <div class="blog-date">{{ blog.date }}</div>
+                        <h2 class="blog-title">{{ blog.title }}</h2>
+                        <p class="blog-excerpt">{{ blog.excerpt }}</p>
                         <a href="#" class="blog-link">Read More →</a>
                     </div>
                 </article>
-
-                <article class="blog-card scroll-reveal">
-                    <img src="{% static 'images/jsbestblog.jpg' %}" alt="JavaScript Tips" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">March 02, 2025</div>
-                        <h2 class="blog-title">JavaScript Best Practices</h2>
-                        <p class="blog-excerpt">Essential tips and tricks for writing clean, maintainable JavaScript code. Covering ES6+ features, async/await patterns, and modern development practices.</p>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card scroll-reveal">
-                    <img src="{% static 'images/csstechniquesblog.jpg' %}" alt="CSS Tricks" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">March 03, 2025</div>
-                        <h2 class="blog-title">Modern CSS Techniques</h2>
-                        <p class="blog-excerpt">Enhance your web styling with advanced CSS methods including Grid, Flexbox, custom properties, and the latest CSS features for modern web development.</p>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card scroll-reveal">
-                    <img src="{% static 'images/reactpost.png' %}" alt="Web Development" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">March 04, 2025</div>
-                        <h2 class="blog-title">Building Scalable Web Applications</h2>
-                        <p class="blog-excerpt">A comprehensive guide to building scalable web applications with modern architecture patterns, microservices, and cloud deployment strategies.</p>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card scroll-reveal">
-                    <img src="{% static 'images/reactpost.png' %}" alt="Full Stack Development" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">March 05, 2025</div>
-                        <h2 class="blog-title">Full Stack Development Roadmap</h2>
-                        <p class="blog-excerpt">Your complete guide to becoming a full stack developer in 2025. From frontend frameworks to backend technologies and deployment strategies.</p>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card scroll-reveal">
-                    <img src="{% static 'images/reactpost.png' %}" alt="API Development" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">March 06, 2025</div>
-                        <h2 class="blog-title">RESTful API Design Principles</h2>
-                        <p class="blog-excerpt">Learn the fundamental principles of designing robust RESTful APIs, including proper HTTP methods, status codes, and authentication strategies.</p>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </article>
+                {% endfor %}
             </div>
         </div>
     </section>

@@ -13,11 +13,11 @@
                 <p class="description">Passionate about creating innovative web solutions and sharing knowledge through technical writing. I specialize in modern web technologies and love building products that make a difference.</p>
                 <div class="hero-buttons">
                     <a href="{% static 'images/cv.pdf' %}" download class="btn btn-primary">Download CV</a>
-                    <a href="{% url 'blog' %}" class="btn btn-secondary">Read Blog</a>
+                    <a href="https://github.com/fhrizwi" target="_blank" class="btn btn-secondary">GitHub</a>
                 </div>
             </div>
             <div class="hero-image scroll-reveal">
-                <img src="{% static 'images/GoldenDP(2).jpg' %}" alt="Faizul Haque Rizwi" class="profile-image">
+                <img src="{% static 'images/mypic.jpg' %}" alt="Faizul Haque Rizwi" class="profile-image">
             </div>
         </div>
     </div>
@@ -30,36 +30,13 @@
                 <p class="section-subtitle">Technologies and tools I work with to bring ideas to life</p>
             </div>
             <div class="skills-grid">
+                {% for skill in skills %}
                 <div class="skill-card scroll-reveal">
-                    <img src="{% static 'icon/Group.svg' %}" alt="HTML5" class="skill-icon">
-                    <h3 class="skill-name">HTML5</h3>
-                    <p class="skill-level">Advanced</p>
+                    <img src="{% static skill.icon %}" alt="{{ skill.name }}" class="skill-icon">
+                    <h3 class="skill-name">{{ skill.name }}</h3>
+                    <p class="skill-level">{{ skill.level }}</p>
                 </div>
-                <div class="skill-card scroll-reveal">
-                    <img src="{% static 'icon/Group-1.svg' %}" alt="CSS3" class="skill-icon">
-                    <h3 class="skill-name">CSS3</h3>
-                    <p class="skill-level">Advanced</p>
-                </div>
-                <div class="skill-card scroll-reveal">
-                    <img src="{% static 'icon/jssvg.svg' %}" alt="JavaScript" class="skill-icon">
-                    <h3 class="skill-name">JavaScript</h3>
-                    <p class="skill-level">Intermediate</p>
-                </div>
-                <div class="skill-card scroll-reveal">
-                    <img src="{% static 'icon/React.svg' %}" alt="React" class="skill-icon">
-                    <h3 class="skill-name">React</h3>
-                    <p class="skill-level">Intermediate</p>
-                </div>
-                <div class="skill-card scroll-reveal">
-                    <img src="{% static 'icon/pythonsvg.svg' %}" alt="Python" class="skill-icon">
-                    <h3 class="skill-name">Python</h3>
-                    <p class="skill-level">Advanced</p>
-                </div>
-                <div class="skill-card scroll-reveal">
-                    <img src="{% static 'icon/javasvg.svg' %}" alt="Java" class="skill-icon">
-                    <h3 class="skill-name">Java</h3>
-                    <p class="skill-level">Intermediate</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -72,30 +49,16 @@
                 <p class="section-subtitle">Some of my recent work that I'm proud of</p>
             </div>
             <div class="projects-grid">
+                {% for project in featured_projects %}
                 <div class="project-card scroll-reveal">
-                    <img src="{% static 'images/Screenshot (105).png' %}" alt="OTT Platform" class="project-image">
+                    <img src="{% static project.image %}" alt="{{ project.title }}" class="project-image">
                     <div class="project-content">
-                        <h3 class="project-title">OTT Platform Development</h3>
-                        <p class="project-description">A feature-rich streaming platform built with modern web technologies, featuring user authentication, video streaming, and content management.</p>
-                        <a href="#" class="project-link">View Project →</a>
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <a href="{{ project.github_link }}" target="_blank" class="project-link">GitHub →</a>
                     </div>
                 </div>
-                <div class="project-card scroll-reveal">
-                    <img src="{% static 'images/ecommerce.jpg' %}" alt="E-Commerce Website" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">E-Commerce Platform</h3>
-                        <p class="project-description">A scalable e-commerce solution with secure payment integration, inventory management, and responsive design.</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="project-card scroll-reveal">
-                    <img src="{% static 'images/reactpost.png' %}" alt="Portfolio Website" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Portfolio Website</h3>
-                        <p class="project-description">A modern and responsive personal portfolio website showcasing projects, skills, and blog posts.</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -108,33 +71,17 @@
                 <p class="section-subtitle">Sharing knowledge and insights about web development</p>
             </div>
             <div class="blog-grid">
+                {% for blog in latest_blogs %}
                 <div class="blog-card scroll-reveal">
-                    <img src="{% static 'images/reactperformaceblog.jpg' %}" alt="React Performance" class="blog-image">
+                    <img src="{% static blog.image %}" alt="{{ blog.title }}" class="blog-image">
                     <div class="blog-content">
-                        <div class="blog-date">March 01, 2025</div>
-                        <h3 class="blog-title">React Performance Optimization</h3>
-                        <p class="blog-excerpt">Advanced techniques to improve your React application's performance and user experience.</p>
+                        <div class="blog-date">{{ blog.date }}</div>
+                        <h3 class="blog-title">{{ blog.title }}</h3>
+                        <p class="blog-excerpt">{{ blog.excerpt }}</p>
                         <a href="#" class="blog-link">Read More →</a>
                     </div>
                 </div>
-                <div class="blog-card scroll-reveal">
-                    <img src="{% static 'images/jsbestblog.jpg' %}" alt="JavaScript Tips" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">March 02, 2025</div>
-                        <h3 class="blog-title">JavaScript Best Practices</h3>
-                        <p class="blog-excerpt">Essential tips and tricks for writing clean, maintainable JavaScript code.</p>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </div>
-                <div class="blog-card scroll-reveal">
-                    <img src="{% static 'images/csstechniquesblog.jpg' %}" alt="CSS Techniques" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">March 03, 2025</div>
-                        <h3 class="blog-title">Modern CSS Techniques</h3>
-                        <p class="blog-excerpt">Enhance your web styling with advanced CSS methods and modern approaches.</p>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

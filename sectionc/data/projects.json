@@ -1,0 +1,25 @@
+{
+  "featured_projects": [
+    {
+      "id": 1,
+      "title": "OTT Platform Development",
+      "description": "A feature-rich streaming platform built with modern web technologies, featuring user authentication, video streaming, and content management.",
+      "image": "images/Screenshot (105).png",
+      "github_link": "https://github.com/fhrizwi/ott-platform"
+    },
+    {
+      "id": 2,
+      "title": "E-Commerce Platform",
+      "description": "A scalable e-commerce solution with secure payment integration, inventory management, and responsive design.",
+      "image": "images/ecommerce.jpg",
+      "github_link": "https://github.com/fhrizwi/ecommerce-platform"
+    },
+    {
+      "id": 3,
+      "title": "Portfolio Website",
+      "description": "A modern and responsive personal portfolio website showcasing projects, skills, and blog posts.",
+      "image": "images/reactpost.png",
+      "github_link": "https://github.com/fhrizwi/portfolio-website"
+    }
+  ]
+}

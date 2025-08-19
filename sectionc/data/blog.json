@@ -1,0 +1,52 @@
+{
+  "blog_posts": [
+    {
+      "id": 1,
+      "title": "React Performance Optimization",
+      "excerpt": "Learn advanced techniques to improve your React application's performance, including memoization, code splitting, and virtual DOM optimization strategies.",
+      "image": "images/reactperformaceblog.jpg",
+      "date": "March 01, 2025",
+      "slug": "react-performance-optimization"
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Best Practices",
+      "excerpt": "Essential tips and tricks for writing clean, maintainable JavaScript code. Covering ES6+ features, async/await patterns, and modern development practices.",
+      "image": "images/jsbestblog.jpg",
+      "date": "March 02, 2025",
+      "slug": "javascript-best-practices"
+    },
+    {
+      "id": 3,
+      "title": "Modern CSS Techniques",
+      "excerpt": "Enhance your web styling with advanced CSS methods including Grid, Flexbox, custom properties, and the latest CSS features for modern web development.",
+      "image": "images/csstechniquesblog.jpg",
+      "date": "March 03, 2025",
+      "slug": "modern-css-techniques"
+    },
+    {
+      "id": 4,
+      "title": "Building Scalable Web Applications",
+      "excerpt": "A comprehensive guide to building scalable web applications with modern architecture patterns, microservices, and cloud deployment strategies.",
+      "image": "images/reactpost.png",
+      "date": "March 04, 2025",
+      "slug": "building-scalable-web-applications"
+    },
+    {
+      "id": 5,
+      "title": "Full Stack Development Roadmap",
+      "excerpt": "Your complete guide to becoming a full stack developer in 2025. From frontend frameworks to backend technologies and deployment strategies.",
+      "image": "images/reactpost.png",
+      "date": "March 05, 2025",
+      "slug": "full-stack-development-roadmap"
+    },
+    {
+      "id": 6,
+      "title": "RESTful API Design Principles",
+      "excerpt": "Learn the fundamental principles of designing robust RESTful APIs, including proper HTTP methods, status codes, and authentication strategies.",
+      "image": "images/reactpost.png",
+      "date": "March 06, 2025",
+      "slug": "restful-api-design-principles"
+    }
+  ]
+}
