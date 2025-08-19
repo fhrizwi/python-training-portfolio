@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Faizul.dev{% endblock %}
+
+{% block content %}
+    <!-- hero content -->
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Hi I'm <span>Faizul</span></h2>
+            <p>Full Stack Developer & Tech Blogger</p>
+            <p>Passionate about creating innovative web solutions and sharing knowledge through technical writing.</p>
+            <div class="btn">
+                <div class="btn1">
+                    <a href="{% static 'images/cv.pdf' %}" download>
+                        <button>Download CV</button>
+                    </a>
+                </div>
+                <div class="btn2">
+                    <button>Read Post</button>
+                </div>
+            </div>
+        </div>
+        <img src="{% static 'images/profile.jpg' %}" alt="Profile">
+    </div>
+{% endblock %}

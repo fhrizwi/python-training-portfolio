@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog - Faizul.dev{% endblock %}
+
+{% block content %}
+    <!-- Blog Header -->
+    <div class="blog-head">
+        <h1>Latest Blog Posts</h1>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div class="post-grid-container">
+        <div class="post">
+            <img src="{% static 'images/reactperformaceblog.jpg' %}" alt="React Performance Optimization">
+            <div class="post-content">
+                <div class="date">March 01, 2025</div>
+                <h2>React Performance Optimization</h2>
+                <p>Advanced techniques to improve your React application's performance.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="{% static 'images/jsbestblog.jpg' %}" alt="JavaScript Tips">
+            <div class="post-content">
+                <div class="date">March 02, 2025</div>
+                <h2>JavaScript Best Practices</h2>
+                <p>Tips and tricks for writing better JavaScript code.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="{% static 'images/csstechniquesblog.jpg' %}" alt="CSS Tricks">
+            <div class="post-content">
+                <div class="date">March 03, 2025</div>
+                <h2>Modern CSS Techniques</h2>
+                <p>Enhance your web styling with advanced CSS methods.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
