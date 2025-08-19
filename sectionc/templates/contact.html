@@ -4,86 +4,85 @@
 {% block title %}Contact - Faizul.dev{% endblock %}
 
 {% block content %}
-    <div class="contact-head">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you. Fill out the form below to get in touch.</p>
-    </div>
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h1 class="section-title">Get In Touch</h1>
+                <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you!</p>
+            </div>
 
-    <div class="contact-container">
-        <form class="contact-form" method="post">
-            {% csrf_token %}
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <div class="contact-container">
+                <div class="contact-info scroll-reveal">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <p>faizul.dev@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong>
+                            <p>Lucknow, Uttar Pradesh, India</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Response Time:</strong>
+                            <p>Usually within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <form class="contact-form scroll-reveal" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
 
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                    </div>
 
-            <button type="submit">Send Message</button>
-        </form>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or just say hello..." required></textarea>
+                    </div>
 
-        <div class="contact-info">
-            <h3>Other Ways to Reach Us</h3>
-            <p><strong>Email:</strong> support@faizul.dev</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Address:</strong> Lucknow, Uttar Pradesh, India</p>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
 
     <style>
-        .contact-head {
-            text-align: center;
-            padding: 40px 20px;
+        .contact-details {
+            margin-top: 2rem;
         }
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
-            flex-wrap: wrap;
+        
+        .contact-item {
+            margin-bottom: 1.5rem;
         }
-        .contact-form {
-            flex: 1 1 400px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .contact-form label {
-            font-weight: bold;
+        
+        .contact-item strong {
+            color: var(--primary-color);
             display: block;
-            margin-top: 15px;
+            margin-bottom: 0.5rem;
         }
-        .contact-form input, 
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #ff9933;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background: #e68a00;
-        }
-        .contact-info {
-            flex: 1 1 300px;
-            background: #f8f8f8;
-            padding: 20px;
-            border-radius: 10px;
+        
+        .contact-item p {
+            color: var(--text-secondary);
+            margin: 0;
         }
     </style>
 {% endblock %}

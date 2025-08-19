@@ -4,12 +4,102 @@
 {% block title %}About - Faizul.dev{% endblock %}
 
 {% block content %}
-<section class="about-hero">
-    <div class="hero-content">
-        <h2>About <span>Me</span></h2>
-        <p>Hello! I’m <strong>Faizul Haque Rizwi</strong>, a passionate Full Stack Developer & Tech Blogger.</p>
-        <p>I create web applications using modern technologies, write about coding, and enjoy solving real-world problems with technology.</p>
-    </div>
-    <img src="{% static '../images/GoldenDP(2).jpg' %}" alt="Faizul's Photo">
-</section>
+    <!-- About Hero Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h1 class="section-title">About Me</h1>
+                <p class="section-subtitle">Get to know more about my journey, skills, and passion for technology</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-text scroll-reveal">
+                        <h2>Hello! I'm Faizul Haque Rizwi</h2>
+                        <p>A passionate Full Stack Developer and Tech Blogger based in Lucknow, India. I specialize in creating modern web applications and sharing knowledge through technical writing.</p>
+                        
+                        <p>My journey in technology started with curiosity about how websites work, and it has evolved into a deep passion for building innovative solutions that solve real-world problems.</p>
+                        
+                        <h3>What I Do</h3>
+                        <ul>
+                            <li>Full Stack Web Development</li>
+                            <li>Technical Blog Writing</li>
+                            <li>UI/UX Design</li>
+                            <li>Code Mentoring</li>
+                        </ul>
+                        
+                        <h3>My Approach</h3>
+                        <p>I believe in writing clean, maintainable code and creating user experiences that are both beautiful and functional. I'm always learning new technologies and sharing my knowledge with the developer community.</p>
+                    </div>
+                    
+                    <div class="about-image scroll-reveal">
+                        <img src="{% static 'images/GoldenDP(2).jpg' %}" alt="Faizul Haque Rizwi" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .about-content {
+            margin-top: 2rem;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .about-text h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .about-text p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .about-text li {
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .about-text li::before {
+            content: '→';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .about-image {
+            display: flex;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+        }
+    </style>
 {% endblock %}

@@ -4,23 +4,138 @@
 {% block title %}Home - Faizul.dev{% endblock %}
 
 {% block content %}
-    <!-- hero content -->
+    <!-- Hero Section -->
     <div class="hero">
-        <div class="hero-content">
-            <h2>Hi I'm <span>Faizul</span></h2>
-            <p>Full Stack Developer & Tech Blogger</p>
-            <p>Passionate about creating innovative web solutions and sharing knowledge through technical writing.</p>
-            <div class="btn">
-                <div class="btn1">
-                    <a href="{% static 'images/cv.pdf' %}" download>
-                        <button>Download CV</button>
-                    </a>
+        <div class="container">
+            <div class="hero-content scroll-reveal">
+                <h1>Hi, I'm Faizul</h1>
+                <p class="subtitle">Full Stack Developer & Tech Blogger</p>
+                <p class="description">Passionate about creating innovative web solutions and sharing knowledge through technical writing. I specialize in modern web technologies and love building products that make a difference.</p>
+                <div class="hero-buttons">
+                    <a href="{% static 'images/cv.pdf' %}" download class="btn btn-primary">Download CV</a>
+                    <a href="{% url 'blog' %}" class="btn btn-secondary">Read Blog</a>
                 </div>
-                <div class="btn2">
-                    <button>Read Post</button>
+            </div>
+            <div class="hero-image scroll-reveal">
+                <img src="{% static 'images/GoldenDP(2).jpg' %}" alt="Faizul Haque Rizwi" class="profile-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with to bring ideas to life</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card scroll-reveal">
+                    <img src="{% static 'icon/Group.svg' %}" alt="HTML5" class="skill-icon">
+                    <h3 class="skill-name">HTML5</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <img src="{% static 'icon/Group-1.svg' %}" alt="CSS3" class="skill-icon">
+                    <h3 class="skill-name">CSS3</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <img src="{% static 'icon/jssvg.svg' %}" alt="JavaScript" class="skill-icon">
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-level">Intermediate</p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <img src="{% static 'icon/React.svg' %}" alt="React" class="skill-icon">
+                    <h3 class="skill-name">React</h3>
+                    <p class="skill-level">Intermediate</p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <img src="{% static 'icon/pythonsvg.svg' %}" alt="Python" class="skill-icon">
+                    <h3 class="skill-name">Python</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <img src="{% static 'icon/javasvg.svg' %}" alt="Java" class="skill-icon">
+                    <h3 class="skill-name">Java</h3>
+                    <p class="skill-level">Intermediate</p>
                 </div>
             </div>
         </div>
-        <img src="{% static 'images/profile.jpg' %}" alt="Profile">
-    </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work that I'm proud of</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card scroll-reveal">
+                    <img src="{% static 'images/Screenshot (105).png' %}" alt="OTT Platform" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">OTT Platform Development</h3>
+                        <p class="project-description">A feature-rich streaming platform built with modern web technologies, featuring user authentication, video streaming, and content management.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card scroll-reveal">
+                    <img src="{% static 'images/ecommerce.jpg' %}" alt="E-Commerce Website" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">A scalable e-commerce solution with secure payment integration, inventory management, and responsive design.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card scroll-reveal">
+                    <img src="{% static 'images/reactpost.png' %}" alt="Portfolio Website" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">A modern and responsive personal portfolio website showcasing projects, skills, and blog posts.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Latest Blog Posts</h2>
+                <p class="section-subtitle">Sharing knowledge and insights about web development</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card scroll-reveal">
+                    <img src="{% static 'images/reactperformaceblog.jpg' %}" alt="React Performance" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-date">March 01, 2025</div>
+                        <h3 class="blog-title">React Performance Optimization</h3>
+                        <p class="blog-excerpt">Advanced techniques to improve your React application's performance and user experience.</p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card scroll-reveal">
+                    <img src="{% static 'images/jsbestblog.jpg' %}" alt="JavaScript Tips" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-date">March 02, 2025</div>
+                        <h3 class="blog-title">JavaScript Best Practices</h3>
+                        <p class="blog-excerpt">Essential tips and tricks for writing clean, maintainable JavaScript code.</p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card scroll-reveal">
+                    <img src="{% static 'images/csstechniquesblog.jpg' %}" alt="CSS Techniques" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-date">March 03, 2025</div>
+                        <h3 class="blog-title">Modern CSS Techniques</h3>
+                        <p class="blog-excerpt">Enhance your web styling with advanced CSS methods and modern approaches.</p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
