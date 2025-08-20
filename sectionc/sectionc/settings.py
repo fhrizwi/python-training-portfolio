@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'py_portfolio',  # Ensure your app is listed here
+    'coffee',  # Ensure your app is listed here
 ]
 
 MIDDLEWARE = [

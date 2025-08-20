@@ -44,3 +44,6 @@ def blog(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def lay(request):
+    return render(request, 'lay.html')
+

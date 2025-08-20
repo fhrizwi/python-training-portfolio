@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf6f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .order-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+    h2 {
+      color: #6f4e37;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      text-align: left;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #6f4e37;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #5a3e2c;
+    }
+  </style>
+</head>
+<body>
+  <div class="order-box">
+    <h2>Order Coffee ☕</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="coffee">Select Coffee:</label>
+      <select id="coffee" required>
+        <option value="">-- Choose --</option>
+        <option value="espresso">Espresso</option>
+        <option value="latte">Latte</option>
+        <option value="cappuccino">Cappuccino</option>
+        <option value="americano">Americano</option>
+      </select>
+
+      <label for="size">Size:</label>
+      <select id="size" required>
+        <option value="">-- Choose --</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</body>
+</html>
